@@ -1,5 +1,5 @@
 # This Dockerfile combines the following code to create a haproxy build that emulates the official docker image with QUIC/HTTP3 support
-# From: https://github.com/docker-library/haproxy/blob/f4ae2c3536eef4ca86d9b2d96bb97b1fb9d82f33/2.6/Dockerfile
+# From: https://github.com/docker-library/haproxy/blob/3e8ddb695fb46f902afea21ce0de1d481c1c71ab/2.7/Dockerfile
 # From: https://github.com/haproxytechblog/haproxy-2.6-http3/blob/main/init.sh
 
 FROM debian:bullseye-slim
@@ -20,9 +20,9 @@ RUN set -eux; \
 
 ENV OPENSSL_URL https://github.com/quictls/openssl/archive/refs/tags/openssl-3.0.8-quic1.tar.gz
 
-ENV HAPROXY_VERSION 2.6.12
-ENV HAPROXY_URL https://www.haproxy.org/download/2.6/src/haproxy-2.6.12.tar.gz
-ENV HAPROXY_SHA256 58f9edb26bf3288f4b502658399281cc5d6478468bd178eafe579c8f41895854
+ENV HAPROXY_VERSION 2.7.6
+ENV HAPROXY_URL https://www.haproxy.org/download/2.7/src/haproxy-2.7.6.tar.gz
+ENV HAPROXY_SHA256 133f357ddb3fcfc5ad8149ef3d74cbb5db6bb4a5ab67289ce0b0ab686cdeb74f
 
 # see https://sources.debian.net/src/haproxy/jessie/debian/rules/ for some helpful navigation of the possible "make" arguments
 RUN set -eux; \
